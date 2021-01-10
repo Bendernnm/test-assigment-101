@@ -7,6 +7,19 @@ const validationSchema = Joi.object({
   maxCount: Joi.number(),
 });
 
-module.exports = (req) => {
+module.exports = (req, res, next) => {
+  if (!req.body) {
+    return next();
+  }
 
+  const { error } = validationSchema.validate(req.body);
+
+  if (error) {
+    return res.status(422).json({
+      code: 422,
+      msg : JSON.stringify(error),
+    });
+  }
+
+  next();
 };

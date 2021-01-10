@@ -1,7 +1,7 @@
 const mongodbClient = require('../../db');
 
 module.exports = async (req, res) => {
-  const { startDate, endDate, minCount, maxCount } = req.body;
+  const { startDate, endDate, minCount, maxCount } = req.body || {};
 
   const aggregation = [];
 

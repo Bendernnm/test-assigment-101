@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node bootstrap.js",
-    "start:dev": "node bootstrap.js"
+    "start:dev": "nodemon bootstrap.js",
+    "test": "jest",
+    "test-coverage": "jest --coverage"
   },
   "dependencies": {
     "@types/mongodb": "^3.6.3",
@@ -19,6 +21,7 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.20",
     "@types/joi": "^14.3.4",
     "@types/winston": "^2.4.4",
     "callsites": "3.1.0",
@@ -29,6 +32,7 @@
     "eslint-plugin-jsx-a11y": "6.2.1",
     "eslint-plugin-node": "8.0.1",
     "eslint-plugin-react": "7.12.4",
-    "eslint-plugin-security": "1.4.0"
+    "eslint-plugin-security": "1.4.0",
+    "jest": "^26.6.3"
   }
 }

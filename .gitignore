@@ -1,0 +1,9 @@
+# ide files
+.idea
+
+# misc
+.DS_Store
+
+node_modules
+
+coverage
