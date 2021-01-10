@@ -5,7 +5,7 @@
     "node": "12.x"
   },
   "scripts": {
-    "start": "node bootstrap.js",
+    "start": "node scripts/use-sample-envs.js && node bootstrap.js",
     "start:local": "nodemon bootstrap.js",
     "start:dev": "nodemon bootstrap.js",
     "test": "jest",
