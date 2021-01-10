@@ -11,7 +11,7 @@ REQUIRED_FIELDS.forEach((field) => {
 });
 
 module.exports = Object.freeze({
-  PORT        : +ENV.PORT,
+  PORT        : +ENV.PORT || 80,
   HOST        : ENV.HOST,
   MONGODB_URL : ENV.MONGODB_URL,
   MONGODB_NAME: ENV.MONGODB_NAME,
